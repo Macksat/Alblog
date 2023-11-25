@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="ListTableViewCell" customModule="PhotoCategorizer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="429" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upq-DQ-ndE">
+                        <rect key="frame" x="0.0" y="2.5" width="40" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="7RM-af-RQZ"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="largecircle.fill.circle" catalog="system"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooX-96-Yus">
+                        <rect key="frame" x="399" y="24.5" width="30" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="AhP-N6-iDF"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle" catalog="system"/>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-wb-1M7">
+                        <rect key="frame" x="40" y="5" width="359" height="70"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="LgZ-6V-BoJ"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cqT-wb-1M7" secondAttribute="bottom" constant="5" id="0np-sm-j9Q"/>
+                    <constraint firstItem="ooX-96-Yus" firstAttribute="leading" secondItem="cqT-wb-1M7" secondAttribute="trailing" id="5gz-CG-ZPH"/>
+                    <constraint firstItem="ooX-96-Yus" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GNF-Gz-nWy"/>
+                    <constraint firstItem="cqT-wb-1M7" firstAttribute="leading" secondItem="upq-DQ-ndE" secondAttribute="trailing" id="VpW-tf-De1"/>
+                    <constraint firstItem="upq-DQ-ndE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="W9i-4f-t2a"/>
+                    <constraint firstItem="upq-DQ-ndE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2.5" id="ayB-nN-d83"/>
+                    <constraint firstAttribute="trailing" secondItem="ooX-96-Yus" secondAttribute="trailing" id="leD-48-wiy"/>
+                    <constraint firstItem="cqT-wb-1M7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="qPQ-3r-uDS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="button" destination="upq-DQ-ndE" id="7TA-Oh-W8w"/>
+                <outlet property="detailButton" destination="ooX-96-Yus" id="CU0-CW-uXb"/>
+                <outlet property="detailButtonWidth" destination="AhP-N6-iDF" id="vj5-VF-hmM"/>
+                <outlet property="textView" destination="cqT-wb-1M7" id="em0-QH-Sw6"/>
+                <outlet property="textViewHeight" destination="LgZ-6V-BoJ" id="QWR-MU-UMd"/>
+            </connections>
+            <point key="canvasLocation" x="216.66666666666669" y="111.16071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+        <image name="largecircle.fill.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

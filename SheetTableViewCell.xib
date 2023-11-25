@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="SheetTableViewCell" customModule="PhotoCategorizer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="436" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t8-T6-4WA">
+                        <rect key="frame" x="406" y="29" width="30" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="ZIv-b7-a9N"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle" catalog="system"/>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ziy-2v-a2N">
+                        <rect key="frame" x="150" y="0.0" width="256" height="89"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="89" id="kVS-DU-VHr"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DDA-UI-chG">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="89"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="89" id="9x5-Rn-aSV"/>
+                            <constraint firstAttribute="width" constant="150" id="tos-Yy-MuX"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0t8-T6-4WA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3XM-e6-NNL"/>
+                    <constraint firstItem="DDA-UI-chG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LCM-aS-0hd"/>
+                    <constraint firstAttribute="bottom" secondItem="DDA-UI-chG" secondAttribute="bottom" id="el3-uL-ElF"/>
+                    <constraint firstItem="Ziy-2v-a2N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fND-iF-SlO"/>
+                    <constraint firstItem="0t8-T6-4WA" firstAttribute="leading" secondItem="Ziy-2v-a2N" secondAttribute="trailing" id="fQq-QN-kHG"/>
+                    <constraint firstAttribute="trailing" secondItem="0t8-T6-4WA" secondAttribute="trailing" id="fnG-cy-038"/>
+                    <constraint firstItem="DDA-UI-chG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mr8-Em-02J"/>
+                    <constraint firstItem="Ziy-2v-a2N" firstAttribute="leading" secondItem="DDA-UI-chG" secondAttribute="trailing" id="skW-Pv-gyr"/>
+                    <constraint firstAttribute="bottom" secondItem="Ziy-2v-a2N" secondAttribute="bottom" id="vcY-Xd-9c9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailButton" destination="0t8-T6-4WA" id="kRq-gm-7r9"/>
+                <outlet property="detailButtonWidth" destination="ZIv-b7-a9N" id="ich-cc-PnN"/>
+                <outlet property="textView1" destination="DDA-UI-chG" id="7aT-T8-FqD"/>
+                <outlet property="textView1Height" destination="9x5-Rn-aSV" id="heT-Vy-1l3"/>
+                <outlet property="textView2" destination="Ziy-2v-a2N" id="l4j-YM-dIh"/>
+                <outlet property="textView2Height" destination="kVS-DU-VHr" id="11U-lA-0bz"/>
+            </connections>
+            <point key="canvasLocation" x="221.73913043478262" y="91.071428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

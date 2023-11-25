@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="SheetInTableViewCell" customModule="Alblog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m9E-za-gJV">
+                        <rect key="frame" x="0.0" y="0.0" width="290" height="89"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="89" id="1Ti-iH-8aU"/>
+                        </constraints>
+                    </tableView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zza-jz-Z2x">
+                        <rect key="frame" x="290" y="29" width="30" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="LKV-LA-ZZm"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle" catalog="system"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zza-jz-Z2x" firstAttribute="leading" secondItem="m9E-za-gJV" secondAttribute="trailing" id="9TP-lb-q3s"/>
+                    <constraint firstItem="Zza-jz-Z2x" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9zv-1s-7FE"/>
+                    <constraint firstAttribute="bottom" secondItem="m9E-za-gJV" secondAttribute="bottom" id="EC0-YU-zZM"/>
+                    <constraint firstItem="m9E-za-gJV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HZk-A1-thA"/>
+                    <constraint firstItem="m9E-za-gJV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RQs-MG-QYB"/>
+                    <constraint firstAttribute="trailing" secondItem="Zza-jz-Z2x" secondAttribute="trailing" id="Vks-D7-TRP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailButton" destination="Zza-jz-Z2x" id="Fxn-16-NlG"/>
+                <outlet property="detailButtonWidth" destination="LKV-LA-ZZm" id="VJu-GJ-DcK"/>
+                <outlet property="tableView" destination="m9E-za-gJV" id="cQ4-ai-lgF"/>
+                <outlet property="tableViewHeight" destination="1Ti-iH-8aU" id="4Rx-Jq-EhQ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="96.763392857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
